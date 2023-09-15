@@ -1,0 +1,70 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.35.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           hypercube-4d
+version:        0.1.0.0
+author:         Vasily Sterekhov
+maintainer:     Vasily Sterekhov
+copyright:      2022 Vasily Sterekhov
+license:        GPL-3.0-or-later
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+library
+  exposed-modules:
+      Input
+      Lib
+      Math
+  other-modules:
+      Paths_hypercube_4d
+  autogen-modules:
+      Paths_hypercube_4d
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , gloss ==1.13.*
+    , matrix ==0.3.6.*
+  default-language: Haskell2010
+
+executable hypercube-4d-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_hypercube_4d
+  autogen-modules:
+      Paths_hypercube_4d
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , gloss ==1.13.*
+    , hypercube-4d
+    , matrix ==0.3.6.*
+  default-language: Haskell2010
+
+test-suite hypercube-4d-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_hypercube_4d
+  autogen-modules:
+      Paths_hypercube_4d
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , gloss ==1.13.*
+    , hypercube-4d
+    , matrix ==0.3.6.*
+  default-language: Haskell2010
