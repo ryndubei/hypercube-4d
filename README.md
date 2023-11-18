@@ -1,3 +1,7 @@
+Uploaded by popular demand.
+
+Note: I made this in one weekend a year ago, so the code is quite messy.
+
 hypercube-4d
 =========
 
